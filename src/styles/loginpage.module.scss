@@ -1,4 +1,7 @@
 .app {
  display: flex;
- gap: 69px;
+ gap: 5.13vw;
+ @media(max-width: 768px){
+    flex-direction: column;
+ }
 }

@@ -1,8 +1,10 @@
 .login {
   border: 2px solid yellow;
-  height: 900px;
-//   width: 704px;
-width: 600px;
+  height: 137vh;
+  width: 43.9vw;
+  @media (max-width: 768px) {
+      height: 100vh;
+    }
 
   h1 {
     color: #213f7d;
@@ -12,14 +14,18 @@ width: 600px;
     line-height: 55px;
     letter-spacing: -0.04em;
     text-align: left;
-    margin: 220px 421px 10px 100px;
+    margin: 220px 421px 10px 7.43vw;
     width: 183px;
     height: 55px;
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
+   
   }
   p {
     font-family: "Avenir", sans-serif;
     color: #545f7d;
-    margin: 0px 410px 60px 100px;
+    margin: 0px 410px 60px 7.43vw;
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
@@ -31,7 +37,13 @@ width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 7.43vw;
+    .textfield{
+      @media (max-width: 768px) {
+      width: 90%;
+      // border: 1px solid blue;
+    }
+    }
     h1 {
       border: 1px solid red;
       width: 157px;
@@ -62,4 +74,7 @@ width: 600px;
       color: #39cdcc;
     }
   }
+  @media (max-width: 768px) {
+     width: 100%;
+    }
 }

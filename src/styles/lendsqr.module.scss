@@ -1,12 +1,12 @@
 .wrapper {
-  border: 2px solid blue;
-  width: 600px;
-  margin-right: 69px;
+  border: 2px solid green;
+  width: 43.9vw;
+  margin-right: 5.05vw;
   .logo {
     display: flex;
     align-items: center;
     gap: 10.58px;
-    margin: 107.6px 0 139px 97px;
+    margin: 107.6px 0 139px 7.1vw;
     border: 1px solid red;
     width: fit-content;
 
@@ -26,9 +26,16 @@
 
   .img {
     border: 2px solid black;
-    width: 600px;
+    width: 43.9vw;
+    // width: 600px;
     height: 337.57px;
-    margin-left: 67px;
+    margin-left: 4.9vw;
     // margin-right: 287px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+  @media (max-width: 768px) {
+      width: 100%;
+    }
 }

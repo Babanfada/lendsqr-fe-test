@@ -19,7 +19,7 @@ const BootstrapButton = styled(Button)({
   lineHeight: 1.5,
   backgroundColor: "#39CDCC",
   //   borderColor: "#0063cc",
-  width: "447px",
+  width: "33.23vw",
   height: "48px",
   borderRadius: "8px",
   fontFamily: "Avenir Next",
@@ -66,13 +66,18 @@ const Login = () => {
       <p>Enter details to login.</p>
       <form action="" method="post">
         <TextField
+          className={styles.textfield}
           id="outlined-basic"
           label="Email"
           variant="outlined"
-          sx={{ width: "447px", height: "50px", marginBottom: "24px" }}
+          sx={{ width: "33.23vw", height: "50px", marginBottom: "24px" }}
         />
 
-        <FormControl sx={{ width: "447px", height: "50px" }} variant="outlined">
+        <FormControl
+          sx={{ width: "33.23vw", height: "50px" }}
+          variant="outlined"
+          className={styles.textfield}
+        >
           <InputLabel htmlFor="outlined-adornment-password">
             Password
           </InputLabel>
@@ -99,7 +104,11 @@ const Login = () => {
           />
         </FormControl>
         <h1>FORGOT PASSWORD ?</h1>
-        <BootstrapButton variant="contained" disableRipple>
+        <BootstrapButton
+          className={styles.textfield}
+          variant="contained"
+          // disableRipple
+        >
           LOG IN
         </BootstrapButton>
       </form>
