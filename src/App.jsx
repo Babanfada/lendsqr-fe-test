@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import styles from "./styles/App.module.scss"
-
+import React from "react";
+import LoginPage from "./assets/LoginPage";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className={styles.app}>
-   
+    <div>
+      <LoginPage />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
