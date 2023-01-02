@@ -46,7 +46,8 @@ const SideNavigation = () => {
         })}
       </div>
       <Heading margin="10px" Header={Header[2]} />
-      <Heading Header={Header[3]} size="12px" />
+      {/* <Heading Header={Header[3]} size="12px" /> */}
+      <div className={styles.version}>v1.2.0</div>
     </div>
   );
 };

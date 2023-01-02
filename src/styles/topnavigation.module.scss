@@ -1,6 +1,11 @@
 .wrapper {
   width: 100vw;
   height: 100px;
+  position: sticky;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  left: 0;
   // border: 1px solid red;
   display: flex;
   align-items: center;
@@ -13,12 +18,12 @@
     justify-content: space-evenly;
     @media (max-width: 576px) {
       margin-right: 20px;
-       width: 60vw;
+      width: 60vw;
     }
     @media (max-width: 300px) {
       margin-right: 0px;
       margin-left: 0px;
-       width: 65vw;
+      width: 65vw;
     }
 
     p:first-child {
