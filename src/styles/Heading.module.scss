@@ -10,10 +10,10 @@
   &:hover{
     background: #39CDCC;
   }
-  @media(max-width:900px){
-        // justify-content: space-between;
-        width: fit-content;
-     }
+//   @media(max-width:900px){
+//         // justify-content: space-between;
+//         width: fit-content;
+//      }
   span {
     // border: 1px solid red;
     height: 25px;
@@ -28,9 +28,9 @@
     line-height: 19px;
     height: 19px;
     color: #213f7d;
-     @media(max-width:900px){
-        display: none;
-        width: 0;
-     }
+    //  @media(max-width:900px){
+    //     display: none;
+    //     width: 0;
+    //  }
   }
 }

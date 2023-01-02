@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import LogoComponent from "./LogoComponent";
 import SearchComponent from "./SearchComponent";
 import image4 from "../assets/images/image4.png";
 import { BsBell } from "react-icons/bs";
+import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { grey } from "@mui/material/colors";
 import { Avatar } from "@mui/material";
 import styles from "../styles/topnavigation.module.scss";
+import { dataContext } from "../App";
+
 const TopNavigation = () => {
+  const { handleMenu } = useContext(dataContext);
+
   return (
     <div className={styles.wrapper}>
       <LogoComponent />
+      <MenuIcon
+        sx={{ color: "#213f7d", fontSize: "40px" }}
+        className={styles.menu}
+        onClick={handleMenu}
+      />
       <SearchComponent />
       <div className={styles.div1}>
         <p>Docs</p>

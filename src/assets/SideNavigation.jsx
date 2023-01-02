@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/sidenav.module.scss";
 import Heading from "./Heading";
 import { Header } from "./NavData";
 import SubHead from "./subHead";
 import { subHeader } from "./NavData";
 import { contents } from "./NavData";
+import { dataContext } from "../App";
 
 const SideNavigation = () => {
+  const { openNav, setopenNav } = useContext(dataContext);
   const customersContents = contents.slice(0, 8);
   const businessContents = contents.slice(8, 17);
   const settingContents = contents.slice(17, 21);
   console.log(settingContents);
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={{ left: `${openNav ? "0" : ""}` }}>
       <Heading margin="41px" Header={Header[0]} />
       <Heading margin="41px" opacity="0.6" Header={Header[1]} />
       <SubHead subHeader={subHeader[0]} />

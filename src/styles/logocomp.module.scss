@@ -6,8 +6,9 @@
   // border: 1px solid red;
   width: fit-content;
   margin-right: 12.3vw;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     margin-right: 3vw;
+    display: none;
   }
 
   img {

@@ -2,17 +2,25 @@
 //   border: 1px solid red;
 //   color: black;
   height: 1695px;
-  width: 20.7vw;
+//   width: 20.7vw;
+  width: 283px;
+  transition: 1s;
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   padding: 39px 0 14px 0vw;
 //   padding: 39px 0 14px 2.48vw;
+@media(max-width:900px){
+        // justify-content: space-between;
+        // display: none;
+        position: relative;
+        left: -300px;
+     }
   .customer{
     margin-bottom: 41px;
   }
   .version{
     // border: 1px solid red;
-    padding-left: 2.38vwgit ;
+    padding-left: 2.38vw ;
     font-family: "Work Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
