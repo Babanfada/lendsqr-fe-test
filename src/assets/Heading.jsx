@@ -7,7 +7,7 @@ const Heading = ({ Header, margin, opacity, size }) => {
       style={{
         marginBottom: margin,
         opacity: opacity,
-        padding: "10px 0",
+        // padding: "10px 0 10px 2.48vw",
         size,
       }}
       className={styles.wrapper}
