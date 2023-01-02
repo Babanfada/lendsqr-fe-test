@@ -27,7 +27,7 @@ const TopNavigation = () => {
       <div className={styles.div1}>
         <p>Docs</p>
         <NotificationsNoneIcon
-          sx={{ fontSize: 40, color: "#213F7D" }}
+          sx={{ fontSize: 25.74,  color: "#213F7D" }}
           className={styles.bell}
         />
         <div className={styles.div}>
