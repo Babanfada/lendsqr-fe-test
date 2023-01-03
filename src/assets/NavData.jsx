@@ -1,10 +1,11 @@
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GroupIcon from "@mui/icons-material/Group";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaDatabase } from "react-icons/fa";
 import { BiTransfer } from "react-icons/bi";
 import { HiOutlineLogout } from "react-icons/hi";
 import { TiGroup } from "react-icons/ti";
+import { HiOutlineUsers } from "react-icons/hi";
 import { VscSettings } from "react-icons/vsc";
 import { RiUserSettingsLine } from "react-icons/ri";
 import { AiOutlineDatabase, AiOutlineBarChart } from "react-icons/ai";
@@ -16,6 +17,7 @@ import {
   FaHandHoldingUsd,
   FaScroll,
 } from "react-icons/fa";
+import { TbNotes } from "react-icons/tb";
 import fee from "../assets/images/fee.png";
 import loan from "../assets/images/loan.png";
 import service from "../assets/images/service.png";
@@ -132,5 +134,32 @@ export const contents = [
   {
     icon: <img src={system} alt={"system"} />,
     name: "Systems Message",
+  },
+];
+
+export const userSummaryData = [
+  {
+    icon: <HiOutlineUsers />,
+    name: "users",
+    number: "2,453",
+    style: { color: "#DF18FF", background: "rgba(223, 24, 255, .2)" },
+  },
+  {
+    icon: <TiGroup />,
+    name: "Active users",
+    number: "2,453",
+    style: { color: "#5718FF", background: "rgba(87, 24, 255, .2)" },
+  },
+  {
+    icon: <TbNotes />,
+    name: "users with loans",
+    number: "12,453",
+    style: { color: "#F55F44", background: "rgba(245, 95, 68, .2)" },
+  },
+  {
+    icon: <FaDatabase />,
+    name: "users with savings",
+    number: "102,453",
+    style: { color: "#FF3366", background: "rgba(255, 51, 102, .2)" },
   },
 ];
