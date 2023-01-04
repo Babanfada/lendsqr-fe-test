@@ -2,13 +2,17 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GroupIcon from "@mui/icons-material/Group";
 import { FaHome, FaDatabase } from "react-icons/fa";
-import { BiTransfer } from "react-icons/bi";
+import { BiTransfer, BiUserX } from "react-icons/bi";
 import { HiOutlineLogout } from "react-icons/hi";
 import { TiGroup } from "react-icons/ti";
 import { HiOutlineUsers } from "react-icons/hi";
 import { VscSettings } from "react-icons/vsc";
 import { RiUserSettingsLine } from "react-icons/ri";
-import { AiOutlineDatabase, AiOutlineBarChart } from "react-icons/ai";
+import {
+  AiOutlineDatabase,
+  AiOutlineBarChart,
+  AiOutlineEye,
+} from "react-icons/ai";
 import { FiUserCheck, FiUserX, FiDivideCircle } from "react-icons/fi";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import {
@@ -22,6 +26,9 @@ import fee from "../assets/images/fee.png";
 import loan from "../assets/images/loan.png";
 import service from "../assets/images/service.png";
 import system from "../assets/images/system.png";
+import SplitButton from "./SplitButton";
+import { TextField } from "@mui/material";
+import BasicDatePicker from "./BasicDatePicker";
 
 const styles = {
   height: "25px",
@@ -161,5 +168,95 @@ export const userSummaryData = [
     name: "users with savings",
     number: "102,453",
     style: { color: "#FF3366", background: "rgba(255, 51, 102, .2)" },
+  },
+];
+
+export const popOverData = [
+  {
+    icon: <AiOutlineEye style={{ width: "20.1px", height: "18px" }} />,
+    name: "View Details",
+  },
+  {
+    icon: <BiUserX style={{ width: "20.1px", height: "18px" }} />,
+    name: "Blacklist User",
+  },
+  {
+    icon: <FiUserCheck style={{ width: "20.57px", height: "18px" }} />,
+    name: "Activate User",
+  },
+];
+
+export const popOverData2 = [
+  {
+    name: "Organization",
+    textField: <SplitButton />,
+  },
+  {
+    name: "Username",
+    textField: (
+      <TextField
+        size="small"
+        type={"text"}
+        id="outlined-basic"
+        label="Username"
+        variant="outlined"
+        sx={{
+          // height: "40px",
+          width: "230px",
+          background: "#FFFFFF",
+          // opacity: 0.2,
+          border: "1px solid #213F7D",
+          borderRadius: "8px",
+        }}
+      />
+    ),
+  },
+  {
+    name: "Email",
+    textField: (
+      <TextField
+        size="small"
+        type={"email"}
+        id="outlined-basic"
+        label="Email"
+        variant="outlined"
+        sx={{
+          height: "40px",
+          width: "230px",
+          background: "#FFFFFF",
+          // opacity: 0.2,
+          border: "1px solid #213F7D",
+          borderRadius: "8px",
+        }}
+      />
+    ),
+  },
+  {
+    name: "Date",
+    textField: <BasicDatePicker />,
+  },
+  {
+    name: "Phone Number",
+    textField: (
+      <TextField
+        size="small"
+        type={"email"}
+        id="outlined-basic"
+        label="Email"
+        variant="outlined"
+        sx={{
+          height: "40px",
+          width: "230px",
+          background: "#FFFFFF",
+          // opacity: 0.2,
+          border: "1px solid #213F7D",
+          borderRadius: "8px",
+        }}
+      />
+    ),
+  },
+  {
+    name: "Status",
+    textField: <SplitButton />,
   },
 ];

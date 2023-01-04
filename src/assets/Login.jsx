@@ -22,7 +22,7 @@ const BootstrapButton = styled(Button)({
   width: "33.23vw",
   height: "48px",
   borderRadius: "8px",
-  fontFamily: "Avenir Next",
+  // fontFamily: "Avenir Next",
   fontweight: "600",
 
   fontFamily: [
