@@ -356,8 +356,7 @@ export const BootstrapButton1 = styled(Button)({
   },
 });
 export const BootstrapButton2 = styled(Button)({
-  
-  height: " 40px", 
+  height: " 40px",
   borderRadius: "8px",
   fontfamily: "Work Sans",
   fontWeight: 600,
@@ -429,3 +428,12 @@ export const BootstrapButton3 = styled(Button)({
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
   },
 });
+
+export const navigation = [
+  "General Details",
+  "Documents",
+  "Bank Details",
+  "Loans",
+  "Savings",
+  "App and System"
+];

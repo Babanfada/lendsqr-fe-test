@@ -2,7 +2,7 @@
   border: 1px solid red;
   color: red;
   width: 75.9vw;
-  height: 210px;
+  height: auto;
   font-family: "Work Sans", sans-serif;
   padding-right: 4.4vw;
   .wrapper2 {
@@ -12,7 +12,7 @@
   }
   .wrapper3 {
     display: flex;
-    border: 1px solid red;
+    // border: 1px solid red;
     align-items: center;
     gap: 14.41px;
      @media(max-width:795px){
@@ -32,7 +32,7 @@
   }
   .wrapper4 {
     display: flex;
-    border: 1px solid red;
+    // border: 1px solid red;
     align-items: center;
     justify-content: space-between;
     @media(max-width:795px){
