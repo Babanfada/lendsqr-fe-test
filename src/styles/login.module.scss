@@ -1,0 +1,80 @@
+.login {
+  // border: 2px solid yellow;
+  height: 137vh;
+  width: 43.9vw;
+  @media (max-width: 768px) {
+      height: 100vh;
+    }
+
+  h1 {
+    color: #213f7d;
+    font-family: "Avenir", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    margin: 220px 421px 10px 7.43vw;
+    width: 183px;
+    height: 55px;
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
+   
+  }
+  p {
+    font-family: "Avenir", sans-serif;
+    color: #545f7d;
+    margin: 0px 410px 60px 7.43vw;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    width: 194px;
+    height: 28px;
+  }
+  form {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 7.43vw;
+    .textfield{
+      @media (max-width: 768px) {
+      width: 90%;
+      // border: 1px solid blue;
+    }
+    }
+    h1 {
+      // border: 1px solid red;
+      width: 157px;
+      height: 17px;
+      font-family: "Avenir", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: left;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #39cdcc;
+      margin: 24px 457px 30px 0px;
+      cursor: pointer;
+    }
+    .password {
+      width: 49.41px;
+      height: 12.5px;
+      font-family: "Avenir", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #39cdcc;
+    }
+  }
+  @media (max-width: 768px) {
+     width: 100%;
+    }
+}

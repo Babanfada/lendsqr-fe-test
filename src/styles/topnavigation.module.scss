@@ -1,0 +1,125 @@
+.wrapper {
+  width: 100vw;
+  height: 100px;
+  position: sticky;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  padding-left: 2.19vw;
+  transition: .5s;
+  @media (max-width: 900px) {
+    justify-content: space-evenly;
+  }
+  .menu {
+    display: block;
+    // border: 1px solid red;
+    margin-right: 10vw;
+    &:hover {
+      cursor: pointer;
+    }
+    @media (min-width: 900px) {
+      display: none;
+    }
+    @media (max-width: 450px) {
+      margin-right: 0vw;
+    }
+  }
+  .div1 {
+    display: flex;
+    // border: 4px solid red;
+    align-items: center;
+    width: 49vw;
+    justify-content: space-evenly;
+    @media (max-width: 900px) {
+      // margin-right: 20px;
+      width: fit-content;
+      // justify-self: flex-end;
+    }
+    // @media (max-width: 300px) {
+    //   margin-right: 0px;
+    //   margin-left: 0px;
+    //   width: 65vw;
+    // }
+
+    p:first-child {
+      color: #213f7d;
+      margin-right: 3.67vw;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      // font-size: small;
+      // font-family: "Work Sans", sans-serif;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      @media (max-width: 900px) {
+        // font-size: 20px;
+        display: none;
+      }
+    }
+    .bell {
+      //     @media (max-width: 576px) {
+      //     display: none;
+      //   }
+      @media (max-width: 900px) {
+        // font-size: 20px;
+        display: none;
+      }
+    }
+    .div {
+      //   width: 28.08vw;
+      margin-left: 2.43vw;
+      display: flex;
+      //   justify-content: flex-end;
+      justify-self: flex-end;
+      // border: 1px solid red;
+      @media (max-width: 900px) {
+        width: auto;
+        margin-left: 0vw;
+      }
+      @media (max-width: 300px) {
+        width: 30vw;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        margin-left: 0.73vw;
+        gap: 0.74vw;
+        padding-right: 20px;
+        justify-content: space-between;
+
+        p {
+          // border: 1px solid red;
+          margin: 0;
+          color: #213f7d;
+          font-family: "Work Sans", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          @media (max-width: 900px) {
+            display: none;
+          }
+        }
+        .arrow {
+          // border: 1px solid blue;
+          // font-size: 30px;
+          width: 30;
+          height: 30;
+          // width: 100px;
+          // @media (max-width: 900px) {
+          //   display: none;
+          // }
+        }
+      }
+    }
+  }
+}
