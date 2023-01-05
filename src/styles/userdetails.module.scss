@@ -1,0 +1,22 @@
+.wrapper{
+    color: rgb(14, 10, 10);
+    border: 5px solid red;
+    // width: 93vw;
+    // width: 1270px;
+    position: absolute;
+    top:15vh;
+    left: 273px;
+    height: 100vh;
+    background-color: red;
+
+
+    width: 1312px;
+  top: 100px;
+  height: 1595px;
+    @media (max-width: 900px) {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+
+  }
+}

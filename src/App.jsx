@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import UsersPage from "./assets/UsersPage";
 import { useEffect } from "react";
+import UserDetails from "./assets/UserDetails";
 
 export const dataContext = createContext("");
 function App() {
@@ -53,7 +54,9 @@ function App() {
         >
           <Routes>
             <Route index exact element={<LoginPage />} />
-            <Route path="Users" exact element={<UsersPage />} />
+            <Route path="Users" exact element={<UsersPage />}>
+              <Route path="userdetails" exact element={<UserDetails />} />
+            </Route>
           </Routes>
         </dataContext.Provider>
       </Router>

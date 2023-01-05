@@ -1,7 +1,10 @@
 .container {
     display: flex;
+   
   .wrapper {
     border: 1px solid red;
+     position: relative;
+    z-index: 1;
     //   color: black;
     height: 1695px;
     //   width: 20.7vw;
