@@ -355,3 +355,77 @@ export const BootstrapButton1 = styled(Button)({
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
   },
 });
+export const BootstrapButton2 = styled(Button)({
+  
+  height: " 40px", 
+  borderRadius: "8px",
+  fontfamily: "Work Sans",
+  fontWeight: 600,
+  fontSize: "14px",
+  lineHeight: "16px",
+  textTransform: "uppercase",
+  color: "#E4033B",
+  width: "170px",
+  border: "1px solid #E4033B",
+  borderRadius: "8px",
+  fontFamily: [
+    "-apple-system",
+    "Work Sans",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    backgroundColor: "rgba(228, 3, 59, .2)",
+    boxShadow: "none",
+  },
+  "&:active": {
+    boxShadow: "none",
+  },
+  "&:focus": {
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
+  },
+});
+export const BootstrapButton3 = styled(Button)({
+  height: " 40px",
+  borderRadius: "8px",
+  fontfamily: "Work Sans",
+  fontWeight: 600,
+  fontSize: "14px",
+  lineHeight: "16px",
+  textTransform: "uppercase",
+  color: "#39CDCC",
+  width: "170px",
+  border: "1px solid #39CDCC",
+  borderRadius: "8px",
+
+  fontFamily: [
+    "-apple-system",
+    "Work Sans",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    backgroundColor: "rgba(57, 205, 204, .2)",
+    boxShadow: "none",
+  },
+  "&:active": {
+    boxShadow: "none",
+  },
+  "&:focus": {
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
+  },
+});
