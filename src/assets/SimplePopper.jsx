@@ -25,7 +25,7 @@ export default function SimplePopper() {
       >
         <img src={dot} alt="menu" style={{ float: "right" }} />
       </Button>
-      <Popper id={id} open={open} anchorEl={anchorEl}>
+      <Popper style={{ zIndex: 2 }} id={id} open={open} anchorEl={anchorEl}>
         <Box
           className={styles.wrapper}
           sx={{ border: 1, p: 1, bgcolor: "background.paper" }}

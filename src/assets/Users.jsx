@@ -3,7 +3,7 @@ import styles from "../styles/users.module.scss";
 import UserSummary from "./UserSummary";
 import { userSummaryData } from "./NavData";
 import { dataContext } from "../App";
-import BasicTable from "./BasicTable";
+import BasicTable, { BasTable } from "./BasicTable";
 import BasicPopover from "./SimplePopper";
 import { Skeleton, Stack } from "@mui/material";
 const Users = () => {
@@ -18,6 +18,7 @@ const Users = () => {
       </div>
       <div className={styles.table}>
         {users ? (
+          // <BasTable />
           <BasicTable />
         ) : (
           <Stack row={2}>

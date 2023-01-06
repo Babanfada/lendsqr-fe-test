@@ -443,7 +443,6 @@ export const clientdata = [
   "Education and Employment",
   "Socials",
   "Guarantor",
-
   "full name",
   "phone number",
   "email address",
@@ -452,7 +451,6 @@ export const clientdata = [
   "marital status",
   "children",
   "type of residence",
-
   "level of education",
   "employment status",
   "sector of employment",
@@ -469,29 +467,11 @@ export const clientdata = [
   "relationship",
 ];
 
-// export const clientdatum = [
-//   {
-//     personInfo: [
-//       "full name",
-//       "phone number",
-//       "email address",
-//       "bvn",
-//       "marital status",
-//       "children",
-//       "type of residence",
-//     ],
-//   },
-//   {
-//     education: [
-//       "level of education",
-//       "employment status",
-//       "sector of employment",
-//       "duration of employment",
-//       "office email",
-//       "monthly income",
-//       "loan repayment",
-//     ],
-//     socials: ["twitter", "facebook", "instagram"],
-//     socials: ["full name", "phone number", "email address", "relationship"],
-//   },
-// ];
+export const userdatum = [
+  "organization",
+  "username",
+  "email",
+  "phone Number",
+  "date joined",
+  "status",
+];
