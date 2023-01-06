@@ -6,13 +6,24 @@ import star2 from "../assets/images/star2.png";
 import { navigation } from "./NavData";
 import { Skeleton } from "@mui/material";
 // import star2 from "../assets/images/star2.png";
-const AvatarDetails = ({user}) => {
+const AvatarDetails = ({ user }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.top}>
         <div className={styles.first}>
           <img
-            // src={user.profile.avatar}
+            src={
+              user ? (
+                user.profile.avatar
+              ) : (
+                <Skeleton
+                  variant="circular"
+                  animation="waave"
+                  height={100}
+                  width={100}
+                />
+              )
+            }
             alt="Avatar"
             height={100}
             width={100}
