@@ -19,6 +19,7 @@ import { Button } from "@mui/material";
 }
 export default function BasicTable() {
   const { users, setusers, handleClick } = useContext(dataContext);
+
   const someUsers = users.slice(0, 8);
   const style = {
     fontFamily: "Work Sans",
@@ -161,6 +162,5 @@ export default function BasicTable() {
         </TableBody>
       </Table>
     </TableContainer>
-    // </div>
   );
 }

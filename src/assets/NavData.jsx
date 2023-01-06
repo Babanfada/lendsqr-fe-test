@@ -435,5 +435,63 @@ export const navigation = [
   "Bank Details",
   "Loans",
   "Savings",
-  "App and System"
+  "App and System",
 ];
+
+export const clientdata = [
+  "Personal Information",
+  "Education and Employment",
+  "Socials",
+  "Guarantor",
+
+  "full name",
+  "phone number",
+  "email address",
+  "bvn",
+  "gender",
+  "marital status",
+  "children",
+  "type of residence",
+
+  "level of education",
+  "employment status",
+  "sector of employment",
+  "duration of employment",
+  "office email",
+  "monthly income",
+  "loan repayment",
+  "twitter",
+  "facebook",
+  "instagram",
+  "full name",
+  "phone number",
+  "email address",
+  "relationship",
+];
+
+// export const clientdatum = [
+//   {
+//     personInfo: [
+//       "full name",
+//       "phone number",
+//       "email address",
+//       "bvn",
+//       "marital status",
+//       "children",
+//       "type of residence",
+//     ],
+//   },
+//   {
+//     education: [
+//       "level of education",
+//       "employment status",
+//       "sector of employment",
+//       "duration of employment",
+//       "office email",
+//       "monthly income",
+//       "loan repayment",
+//     ],
+//     socials: ["twitter", "facebook", "instagram"],
+//     socials: ["full name", "phone number", "email address", "relationship"],
+//   },
+// ];

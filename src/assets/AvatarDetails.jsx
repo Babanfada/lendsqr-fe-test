@@ -4,16 +4,34 @@ import image4 from "../assets/images/image4.png";
 import star1 from "../assets/images/star1.png";
 import star2 from "../assets/images/star2.png";
 import { navigation } from "./NavData";
+import { Skeleton } from "@mui/material";
 // import star2 from "../assets/images/star2.png";
-const AvatarDetails = () => {
+const AvatarDetails = ({user}) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.top}>
         <div className={styles.first}>
-          <img src={image4} alt="Avatar" height={100} width={100} />
+          <img
+            // src={user.profile.avatar}
+            alt="Avatar"
+            height={100}
+            width={100}
+          />
           <div>
-            <p>Grace Effiom</p>
-            <p>LJJDSJDS</p>
+            <p>
+              {user ? (
+                user.profile.lastName + " " + user.profile.firstName
+              ) : (
+                <Skeleton variant="rectangular" width={"70px"} height={10} />
+              )}
+            </p>
+            <p>
+              {user ? (
+                user.accountNumber
+              ) : (
+                <Skeleton variant="rectangular" width={"70px"} height={10} />
+              )}
+            </p>
           </div>
         </div>
         <div className={styles.second}>
@@ -25,8 +43,21 @@ const AvatarDetails = () => {
           </p>
         </div>
         <div className={styles.third}>
-          <p>#200,000,000</p>
-          <p>984983439/PROVIDUS BANK</p>
+          <p>
+            {user ? (
+              user.accountBalance
+            ) : (
+              <Skeleton variant="rectangular" width={"70px"} height={10} />
+            )}
+          </p>
+          <p>
+            {user ? (
+              user.profile.bvn
+            ) : (
+              <Skeleton variant="rectangular" width={"70px"} height={10} />
+            )}
+            /Providus Bank
+          </p>
         </div>
       </div>
 
