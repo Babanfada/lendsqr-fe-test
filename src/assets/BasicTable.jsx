@@ -11,12 +11,22 @@ import { useContext } from "react";
 import SimplePopper2 from "./SimplePopper2";
 import SimplePopper from "./SimplePopper";
 import styles from "../styles/bastable.module.scss";
+import { useParams, Link } from "react-router-dom";
+import ReactPaginate from "react-paginate";
+import { Pagination } from "@mui/material";
 export default function BasicTable() {
-  const { users, setusers, handleClick } = useContext(dataContext);
-  const myClickHandler = () => {
-    console.log("click");
+  const { users } = useContext(dataContext);
+  const [pageNumber, setpageNumber] = React.useState(0);
+
+  const usersperpage = 8;
+  const pagesVisited = pageNumber * usersperpage;
+
+  const displayUsers = users.slice(pagesVisited, pagesVisited + usersperpage);
+  
+  const pageCount = Math.ceil(users.length / usersperpage);
+  const changePage = ({ selected }) => {
+    setpageNumber(selected);
   };
-  const someUsers = users.slice(0, 8);
   const style = {
     fontFamily: "Work Sans",
     fontStyle: "normal",
@@ -26,6 +36,10 @@ export default function BasicTable() {
     textTransform: "uppercase",
     color: "#545F7D",
     cursor: "pointer",
+    // border: "3px solid red",
+    width: "400px",
+    // display: "flex",
+    // margin: 0,
   };
   const style1 = {
     fontFamily: "Work Sans",
@@ -36,88 +50,118 @@ export default function BasicTable() {
     color: "#545F7D",
   };
 
-  const tableStyle = {
-    overflow: "auto", // scroll
-  };
-
   return (
-    <TableContainer className={styles.wrapper} component={Paper}>
-      <Table aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell style={style} align="left">
-              <span>
-                ORGANIZATION <SimplePopper2 />
-              </span>
-            </TableCell>
-            <TableCell style={style} align="left">
-              USERNAME
-              <SimplePopper2
-                style={{ display: "inline-block", marginLeft: "3px" }}
-              />
-            </TableCell>
-            <TableCell style={style} align="left">
-              EMAIL
-              <SimplePopper2
-                style={{ display: "inline-block", marginLeft: "3px" }}
-              />
-            </TableCell>
-            <TableCell style={style} align="left">
-              PHONE NUMBER
-              <SimplePopper2
-                style={{ display: "inline-block", marginLeft: "3px" }}
-              />
-            </TableCell>
-            <TableCell style={style} align="left">
-              DATE JOINED
-              <SimplePopper2
-                style={{ display: "inline-block", marginLeft: "3px" }}
-              />
-            </TableCell>
-            <TableCell style={style} align="left">
-              STATUS
-              <SimplePopper2
-                style={{ display: "inline-block", marginLeft: "3px" }}
-              />
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {someUsers.map((row) => (
-            <TableRow
-              key={row.id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell style={style1} component="th" scope="row">
-                {row.orgName}
+    <div>
+      <TableContainer component={Paper}>
+        <Table aria-label="simple table">
+          <TableHead style={{ display: "flex" }}>
+            <TableRow>
+              <TableCell style={style} align="left">
+                <span style={{ border: "1px solid red" }}>ORGANIZATION</span>
+                <span>
+                  <SimplePopper2
+                    style={{
+                      display: "inline-block",
+                      marginLeft: "3px",
+                      border: "1px solid red",
+                    }}
+                  />
+                </span>
               </TableCell>
-              <TableCell style={style1} align="left">
-                {row.userName}
+              <TableCell style={style} align="left">
+                USERNAME
+                <SimplePopper2
+                  style={{ display: "inline-block", marginLeft: "3px" }}
+                />
               </TableCell>
-              <TableCell
-                style={{
-                  style1,
-                  textTransform: "lowercase",
-                  color: "#545F7D",
-                }}
-                align="left"
-              >
-                {row.education.officeEmail}
+              <TableCell style={style} align="left">
+                EMAIL
+                <SimplePopper2
+                  style={{ display: "inline-block", marginLeft: "3px" }}
+                />
               </TableCell>
-              <TableCell style={style1} align="left">
-                {row.phoneNumber}
+              <TableCell style={style} align="left">
+                PHONE NUMBER
+                <SimplePopper2
+                  style={{ display: "inline-block", marginLeft: "3px" }}
+                />
               </TableCell>
-              <TableCell style={style1} align="left">
-                {row.createdAt}
+              <TableCell style={style} align="left">
+                DATE JOINED
+                <SimplePopper2
+                  style={{ display: "inline-block", marginLeft: "3px" }}
+                />
               </TableCell>
-              <TableCell style={style1} align="left">
-                {row.profile.gender}
-                <SimplePopper style={{ width: 0 }} />
+              <TableCell style={style} align="left">
+                STATUS
+                <SimplePopper2
+                  style={{ display: "inline-block", marginLeft: "3px" }}
+                />
               </TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {displayUsers.map((row) => (
+              <Link
+                style={{ textDecoration: "none" }}
+                key={row.id}
+                to={`userdetails/${row.id}`}
+              >
+                <TableRow
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell style={style1} component="th" scope="row">
+                    {row.orgName}
+                  </TableCell>
+                  <TableCell style={style1} align="left">
+                    {row.userName}
+                  </TableCell>
+                  <TableCell
+                    style={{
+                      style1,
+                      textTransform: "lowercase",
+                      color: "#545F7D",
+                    }}
+                    align="left"
+                  >
+                    {row.education.officeEmail}
+                  </TableCell>
+                  <TableCell style={style1} align="left">
+                    {row.phoneNumber}
+                  </TableCell>
+                  <TableCell style={style1} align="left">
+                    {row.createdAt}
+                  </TableCell>
+                  <TableCell style={style1} align="left">
+                    {row.profile.gender}
+                    <SimplePopper style={{ width: 0 }} />
+                  </TableCell>
+                </TableRow>
+              </Link>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <div style={{ border: "1px solid red", display: "red" }}>
+        <ReactPaginate
+          previousLabel="Prev"
+          nextLabel="Next"
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName="paginationWrapper"
+          previousLinkClassName="Prevbtn"
+          nextLinkClassName="nextbtn"
+          disabledClassName="disable"
+          activeLinkClassName="paginationactive"
+        />
+        <Pagination
+          count={pageCount}
+          size="large"
+          PageCount={pageCount}
+          // onPageChange={changePage}
+          onChange={changePage}
+        />
+      </div>
+    </div>
   );
 }

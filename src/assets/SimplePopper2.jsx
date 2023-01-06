@@ -17,7 +17,7 @@ export default function SimplePopper() {
   return (
     <div>
       <button
-        style={{ border: "none" }}
+        // style={{ border: "1px solid red", display: "inline-table" }}
         aria-describedby={id}
         type="button"
         onClick={handleClick}

@@ -56,8 +56,8 @@ function App() {
           <Routes>
             <Route index exact element={<LoginPage />} />
             {/* <Route path="table" exact element={<BasicTable />} /> */}
-            <Route path="Users" exact element={<UsersPage />}>
-              <Route path="userdetails" exact element={<UserDetails />} />
+            <Route path="/Users/" exact element={<UsersPage />}>
+              <Route path="userdetails/:id" exact element={<UserDetails />} />
             </Route>
           </Routes>
         </dataContext.Provider>
