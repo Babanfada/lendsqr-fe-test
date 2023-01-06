@@ -18,7 +18,7 @@ export default function SimplePopper() {
   return (
     <div>
       <Button
-        style={{ border: "1px solid red", width: "100px", cursor: "pointer" }}
+        style={{ border: "1px solid red", width: 0, cursor: "pointer" }}
         aria-describedby={id}
         type="button"
         onClick={handleClick}

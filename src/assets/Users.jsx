@@ -3,9 +3,9 @@ import styles from "../styles/users.module.scss";
 import UserSummary from "./UserSummary";
 import { userSummaryData } from "./NavData";
 import { dataContext } from "../App";
-import BasicTable, { BasTable } from "./BasicTable";
-import BasicPopover from "./SimplePopper";
+import BasicTable from "./BasicTable";
 import { Skeleton, Stack } from "@mui/material";
+
 const Users = () => {
   const { users, setusers } = useContext(dataContext);
   return (
@@ -18,7 +18,6 @@ const Users = () => {
       </div>
       <div className={styles.table}>
         {users ? (
-          // <BasTable />
           <BasicTable />
         ) : (
           <Stack row={2}>

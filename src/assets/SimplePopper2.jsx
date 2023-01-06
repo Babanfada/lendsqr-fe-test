@@ -16,7 +16,12 @@ export default function SimplePopper() {
 
   return (
     <div>
-      <button aria-describedby={id} type="button" onClick={handleClick}>
+      <button
+        style={{ border: "none" }}
+        aria-describedby={id}
+        type="button"
+        onClick={handleClick}
+      >
         <img src={menu} alt="menu" className={styles.wrapper} />
       </button>
       <Popper style={{ zIndex: 2 }} id={id} open={open} anchorEl={anchorEl}>
