@@ -1,5 +1,5 @@
 import React from "react";
-import union from "../assets/images/union.png";
+import union from "../assets/images/Union.png";
 import styles from "../styles/logocomp.module.scss";
 const LogoComponent = () => {
   return (
