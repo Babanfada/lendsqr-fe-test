@@ -56,7 +56,7 @@ function App() {
           <Routes>
             <Route index exact element={<LoginPage />} />
             {/* <Route path="table" exact element={<BasicTable />} /> */}
-            <Route path="/users/" element={<UsersPage />}>
+            <Route path="/users" element={<UsersPage />}>
               <Route path="userdetails/:id" element={<UserDetails />} />
             </Route>
           </Routes>
