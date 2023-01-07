@@ -5,6 +5,7 @@
     // width: 97vw;
   // width: 1312px;
     width: 78.84vw;
+    // width: 90%;
   //   position: absolute;
   //   right: 0;
   top: 100px;
@@ -36,6 +37,7 @@
     display: flex;
     // border: 1px solid red;
     padding-left: 4.4vw;
+    padding-right: 2.4vw;
     // width: 200px;
     // margin: 4.4vw;
     margin-top: 0;
@@ -43,7 +45,7 @@
     margin-bottom: 40px;
     cursor: pointer;
     // background-color: yellow;
-    @media (max-width: 900px) {
+    @media (max-width: 1350px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }

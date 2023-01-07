@@ -12,9 +12,8 @@
   padding-top: 30px;
   padding-left: 30px;
   // border: 1px solid blue;
-  @media (max-width: 754px) {
-    // padding-left: 0px;
-    // border: 1px solid red;
+ @media(max-width:900px){
+    width: 100%;
   }
   .top {
     // border: 1px solid red;

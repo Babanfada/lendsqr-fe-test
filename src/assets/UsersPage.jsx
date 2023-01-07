@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 const UsersPage = () => {
   const { handleMenu, openNav, setopenNav } = useContext(dataContext);
   return (
-    <div style={{ width: "113vw" }}>
+    <div >
       <TopNavigation />
       <SideNavigation />
       <Outlet />

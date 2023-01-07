@@ -1,10 +1,13 @@
 .wrapper {
-  border: 1px solid red;
+  border: 2px solid red;
   color: red;
   width: 70.9vw;
   height: auto;
   font-family: "Work Sans", sans-serif;
-  // padding-right: 4.4vw;
+  padding-right: 1.4vw;
+  @media(max-width:900px){
+    width: 100%;
+  }
   .wrapper2 {
     display: flex;
     flex-direction: column;
