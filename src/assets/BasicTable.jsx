@@ -197,7 +197,7 @@ export default function BasicTable() {
   return (
     <div className={styles.wrapper}>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+        <Table sx={{ minWidth: 650 }} size="large" aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell className={styles.tablecell}>
@@ -257,7 +257,7 @@ export default function BasicTable() {
                     {row.createdAt}
                   </Link>
                 </TableCell>
-                <TableCell align="left">
+                <TableCell  align="left">
                   <Link className={styles.link} to={`userdetails/${row.id}`}>
                     {row.profile.gender}
                   </Link>

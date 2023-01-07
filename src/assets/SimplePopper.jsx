@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import Popper from "@mui/material/Popper";
 import dot from "../assets/images/dot.png";
 import Button from "@mui/material/Button";
-import{ popOverData} from "../assets/NavData";
-import styles from "../styles/simplepopper.module.scss"
+import { popOverData } from "../assets/NavData";
+import styles from "../styles/simplepopper.module.scss";
 export default function SimplePopper() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -17,14 +17,14 @@ export default function SimplePopper() {
 
   return (
     <div>
-      <Button
-        style={{ border: "1px solid red", width: 0, cursor: "pointer" }}
+      <div
+       className={styles.container}
         aria-describedby={id}
         type="button"
         onClick={handleClick}
       >
         <img src={dot} alt="menu" style={{ float: "right" }} />
-      </Button>
+      </div>
       <Popper style={{ zIndex: 2 }} id={id} open={open} anchorEl={anchorEl}>
         <Box
           className={styles.wrapper}
