@@ -11,6 +11,7 @@
   width: 278px;
   &:hover{
     background: #39CDCC;
+    // color: rgba(33, 63, 125, 1);
   }
 //   @media(max-width:900px){
 //         // justify-content: space-between;
@@ -19,6 +20,7 @@
   span {
     // border: 1px solid red;
     height: 25px;
+    
   }
   span:nth-child(2) {
     // border: 1px solid red;
@@ -30,6 +32,10 @@
     line-height: 19px;
     height: 19px;
     color: #213f7d;
+  //   &:hover{
+  //   // background: #39CDCC;
+  //   color: rgba(33, 63, 125, 1);
+  // }
     //  @media(max-width:900px){
     //     display: none;
     //     width: 0;

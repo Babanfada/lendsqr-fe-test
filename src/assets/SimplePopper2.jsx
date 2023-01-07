@@ -15,15 +15,16 @@ export default function SimplePopper() {
   const id = open ? "simple-popper" : undefined;
 
   return (
-    <div>
-      <button
+    <div className={styles.container}>
+      <div
+        className={styles.container}
         // style={{ border: "1px solid red", display: "inline-table" }}
         aria-describedby={id}
         type="button"
         onClick={handleClick}
       >
         <img src={menu} alt="menu" className={styles.wrapper} />
-      </button>
+      </div>
       <Popper style={{ zIndex: 2 }} id={id} open={open} anchorEl={anchorEl}>
         <Box
           className={styles.box}

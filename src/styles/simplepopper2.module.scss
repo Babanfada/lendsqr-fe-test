@@ -1,7 +1,12 @@
+.container{
+float: right;
+border: none;
+
 .wrapper {
   // border: 1px solid red;
   cursor: pointer;
   border: none;
+  // float: right;
 }
 
 .box {
@@ -39,4 +44,5 @@
       gap: 10px;
       
     }
+}
 }
