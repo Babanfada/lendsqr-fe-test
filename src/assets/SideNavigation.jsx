@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "../styles/sidenav.module.scss";
 import Heading from "./Heading";
 import { Header } from "./NavData";
-import SubHead from "./subHead";
+import SubHead from "./SubHead";
 import { subHeader } from "./NavData";
 import { contents } from "./NavData";
 import { dataContext } from "../App";
