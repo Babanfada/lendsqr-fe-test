@@ -1,5 +1,5 @@
 import React from "react";
-import union from "./images/union.png";
+import union from "./images/Union.png";
 import styles from "../styles/lendsqr.module.scss";
 import pablo from "./images/pablo-sign-in-1.svg";
 const Lendsqr = () => {
