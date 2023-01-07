@@ -8,10 +8,12 @@ import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
+import { RiArrowDropDownLine, RiArrowDownSLine } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
 // import { dataContext } from "../App";
 // import { useContext } from "react";
 
-const options = ["Select", "labore-dolor-et", "Rebase and merge"];
+const options = ["Select", "Organization", "Organization"];
 
 export default function SplitButton() {
   // const { users } = useContext(dataContext);
@@ -59,6 +61,7 @@ export default function SplitButton() {
             // fontWeight: 400,
             // fontSize: 14,
             // lineHeight: 16,
+            border: "none",
           }}
           onClick={handleClick}
         >
@@ -66,19 +69,23 @@ export default function SplitButton() {
         </Button>
         <Button
           size="small"
-          sx={{ backgroundColor: "white" }}
+          sx={{ backgroundColor: "white", border: "none" }}
           aria-controls={open ? "split-button-menu" : undefined}
           aria-expanded={open ? "true" : undefined}
           aria-label="select merge strategy"
           aria-haspopup="menu"
           onClick={handleToggle}
         >
-          <ArrowDropDownIcon sx={{ color: "rgba(84, 95, 125, 1)" }} />
+          <IoIosArrowDown
+            color="rgba(33, 63, 125, 1)"
+            // sx={{ color: "rgba(33, 63, 125, 1)" }}
+          />
         </Button>
       </ButtonGroup>
       <Popper
         sx={{
           zIndex: 1,
+          border: "none",
         }}
         open={open}
         anchorEl={anchorRef.current}

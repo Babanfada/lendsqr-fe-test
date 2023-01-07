@@ -1,9 +1,10 @@
 .container{
   cursor: pointer;
-  float: right;
+  // float:left;
+  // align-self: flex-start;
 // float:inline-start;
   width: 10px;
-  border: 1px solid red;
+  // border: 1px solid rgb(248, 87, 87);
 }
 .wrapper {
   width: 180px;
