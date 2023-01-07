@@ -31,7 +31,7 @@ export default function BasicTable() {
   };
   const style1 = {
     display: "flex",
-    border: "1px solid red",
+    // border: "1px solid red",
     // justifyContent: "flex-start",
     justifyContent: "space-between",
     // gap: "1vw",
@@ -40,7 +40,7 @@ export default function BasicTable() {
   };
   const style2 = {
     display: "flex",
-    border: "1px solid red",
+    // border: "1px solid red",
     justifyContent: "space-between",
     alignItems:"center",
     width: "150px",

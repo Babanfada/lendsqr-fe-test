@@ -257,7 +257,7 @@ export const popOverData2 = [
   },
   {
     name: "Date",
-    textField: <BasicDatePicker style={{ border: "1px solid red" }} />,
+    textField: <BasicDatePicker  />,
   },
   {
     name: "Phone Number",
