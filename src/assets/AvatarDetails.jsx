@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/avatardetails.module.scss";
-import image4 from "../assets/images/image4.png";
+// import image4 from "../assets/images/image4.png";
 import star1 from "../assets/images/star1.png";
 import star2 from "../assets/images/star2.png";
 import { navigation } from "./NavData";

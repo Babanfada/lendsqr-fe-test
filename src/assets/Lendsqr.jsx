@@ -1,6 +1,6 @@
-import React from 'react'
-import union from "../assets/images/union.png"
-import styles from   "../styles/lendsqr.module.scss"
+import React from "react";
+import union from "./images/union.png";
+import styles from "../styles/lendsqr.module.scss";
 import pablo from "./images/pablo-sign-in-1.svg";
 const Lendsqr = () => {
   return (
@@ -12,6 +12,6 @@ const Lendsqr = () => {
       <img className={styles.img} src={pablo} alt="pablo-sign-in-1" />
     </div>
   );
-}
+};
 
-export default Lendsqr
+export default Lendsqr;
