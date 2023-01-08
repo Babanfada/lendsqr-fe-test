@@ -3,9 +3,9 @@ A React application built using Vite.js for the Lendsqr team.
 
 Features
 Three routes:
-Login page/index route: https://ibrahim-muhammed-lendsqr-fe-test-babanfada.vercel.app/
-Users page: https://ibrahim-muhammed-lendsqr-fe-test-babanfada.vercel.app/users
-Users details page (nested route inside the users page):https://ibrahim-muhammed-lendsqr-fe-test-babanfada.vercel.app/users/userdetails/id
+Login page/index route:https://ibrahim-muhammed-lendsqr-fe-test.vercel.app/
+Users page: https://ibrahim-muhammed-lendsqr-fe-test.vercel.app/users
+Users details page (nested route inside the users page):https://ibrahim-muhammed-lendsqr-fe-test.vercel.app/users/userdetails/id
 
 The Login/index route  displays the login page and serves as the starting point for users.
 
