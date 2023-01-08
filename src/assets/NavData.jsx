@@ -33,34 +33,6 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { withStyles } from "@mui/styles";
 
-// const labelStyle = {
-//   label: {
-//     // Define your styles for the label here
-//     fontFamily: "Work Sans",
-//   },
-// };
-
-// function StyledTextField(props) {
-//   const { classes } = props;
-//   return (
-//     <TextField
-//       label="email"
-//       InputLabelProps={{
-//         className: classes.label,
-//       }}
-//       // Other props go here
-//     />
-//   );
-// }
-
-// export default withStyles(labelStyle)(StyledTextField);
-
-// InputLabelProps={{
-//   style: {
-//     color: 'red'
-//   }
-// }}
-
 const styles = {
   height: "25px",
 };
@@ -257,7 +229,7 @@ export const popOverData2 = [
   },
   {
     name: "Date",
-    textField: <BasicDatePicker  />,
+    textField: <BasicDatePicker />,
   },
   {
     name: "Phone Number",

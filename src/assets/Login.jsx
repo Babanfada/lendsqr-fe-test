@@ -10,6 +10,22 @@ import TextField from "@mui/material/TextField";
 import styles from "../styles/login.module.scss";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import { useState, useContext } from "react";
+// import { app } from "../firebase";
+import { auth } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { dataContext } from "../App";
+// import {
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+// } from "firebase/auth";
+// import { auth } from "../firebase";
+// import { useNavigate } from "react-router-dom";
+// import { useContext } from "react";
+// import { dataContext } from "../App";
+// import CustomizedSnackbars from "./AlertSuccess";
+import CustomizedSnackbarsF from "./AlertFailed";
+
 const BootstrapButton = styled(Button)({
   boxShadow: "none",
   textTransform: "none",
@@ -53,19 +69,52 @@ const BootstrapButton = styled(Button)({
 });
 
 const Login = () => {
-  const [showPassword, setShowPassword] = React.useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = () => {
     event.preventDefault();
   };
+
+  const { currentUser, setcurrentUser } = useContext(dataContext);
+  const [error, seterror] = useState(false);
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  // const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // const auth = getAuth(app);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        <CustomizedSnackbarsF />;
+        console.log("there is an error");
+      });
+  };
+
+  // const { currentUser, setcurrentUser } = useContext(dataContext);
+  // const [error, seterror] = React.useState(false);
+  // const [email, setemail] = React.useState("");
+  // const [password, setpassword] = React.useState("");
+  // const navigate = useNavigate();
+
   return (
     <div className={styles.login}>
       <h1>Welcome!</h1>
       <p>Enter details to login.</p>
-      <form action="" method="post">
+      <form onSubmit={handleSubmit}>
         <TextField
+          required
           className={styles.textfield}
           id="outlined-basic"
           label="Email"
@@ -77,6 +126,7 @@ const Login = () => {
           sx={{ width: "33.23vw", height: "50px" }}
           variant="outlined"
           className={styles.textfield}
+          required
         >
           <InputLabel htmlFor="outlined-adornment-password">
             Password
@@ -108,6 +158,8 @@ const Login = () => {
           className={styles.textfield}
           variant="contained"
           // disableRipple
+          type="submit"
+          // onSubmit={handleSubmit}
         >
           LOG IN
         </BootstrapButton>

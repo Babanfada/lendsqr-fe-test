@@ -8,8 +8,6 @@
   padding-top: 30px;
   padding-left: 30px;
   margin-top: 30px;
-  //   width: 1037px;
-  //   height: 910px;
   background: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -36,11 +34,7 @@
       //   color: red;
     }
     h1 + div {
-      //   display: flex;
-      //   flex-wrap: wrap;
-      //   column-gap: 7.32vw;
-      // //   gap: 7.32vw;
-      //   row-gap: 30px;
+      
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       row-gap: 30px;

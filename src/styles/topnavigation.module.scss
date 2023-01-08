@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   padding-left: 2.19vw;
-  transition: .5s;
+  transition: 0.5s;
   @media (max-width: 900px) {
     justify-content: space-evenly;
   }
@@ -39,11 +39,6 @@
       width: fit-content;
       // justify-self: flex-end;
     }
-    // @media (max-width: 300px) {
-    //   margin-right: 0px;
-    //   margin-left: 0px;
-    //   width: 65vw;
-    // }
 
     p:first-child {
       color: #213f7d;
@@ -110,14 +105,8 @@
           }
         }
         .arrow {
-          // border: 1px solid blue;
-          // font-size: 30px;
           width: 30;
           height: 30;
-          // width: 100px;
-          // @media (max-width: 900px) {
-          //   display: none;
-          // }
         }
       }
     }

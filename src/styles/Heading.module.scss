@@ -3,24 +3,20 @@
   align-items: center;
   color: #213f7d;
   padding: 10px 0 10px 2.48vw;
-//   padding-left: 2.48vw;
+  //   padding-left: 2.48vw;
   cursor: pointer;
   // border: 1px solid rgb(29, 182, 62);
   margin-bottom: 7px;
   gap: 0.73vw;
   width: 278px;
-  &:hover{
-    background: #39CDCC;
+  &:hover {
+    background: #39cdcc;
     // color: rgba(33, 63, 125, 1);
   }
-//   @media(max-width:900px){
-//         // justify-content: space-between;
-//         width: fit-content;
-//      }
+
   span {
     // border: 1px solid red;
     height: 25px;
-    
   }
   span:nth-child(2) {
     // border: 1px solid red;
@@ -32,13 +28,5 @@
     line-height: 19px;
     height: 19px;
     color: #213f7d;
-  //   &:hover{
-  //   // background: #39CDCC;
-  //   color: rgba(33, 63, 125, 1);
-  // }
-    //  @media(max-width:900px){
-    //     display: none;
-    //     width: 0;
-    //  }
   }
 }

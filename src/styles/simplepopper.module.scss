@@ -1,10 +1,6 @@
-.container{
+.container {
   cursor: pointer;
-  // float:left;
-  // align-self: flex-start;
-// float:inline-start;
   width: 10px;
-  // border: 1px solid rgb(248, 87, 87);
 }
 .wrapper {
   width: 180px;
@@ -14,7 +10,7 @@
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
   padding-left: 20.72px;
-//   border: 1px solid red;
+  //   border: 1px solid red;
   .div {
     display: flex;
     flex-direction: column;
@@ -23,16 +19,16 @@
     align-items: flex-start;
     // margin-left: 20px;
     .div2 {
-        display: flex;
-        gap: 10px;
-        // align-items: center;
+      display: flex;
+      gap: 10px;
+      // align-items: center;
       font-family: "Work Sans";
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
       color: #545f7d;
-    //   border: 1px solid red;
+      //   border: 1px solid red;
       align-items: center;
       margin-left: 8.72px;
     }

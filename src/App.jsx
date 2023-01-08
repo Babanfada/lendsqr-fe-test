@@ -11,6 +11,7 @@ import UsersPage from "./assets/UsersPage";
 import { useEffect } from "react";
 import UserDetails from "./assets/UserDetails";
 import BasicTable from "./assets/BasicTable";
+import useLocalStorage from "./assets/useLocalStorage";
 
 export const dataContext = createContext("");
 function App() {
@@ -35,11 +36,11 @@ function App() {
     setopenNav((prev) => !prev);
   };
 
-  // const [anchorEl, setAnchorEl] = React.useState(null);
+  const [currentUser, setcurrentUser] = useLocalStorage("currentUser", false);
 
-  // const handleClick = (event) => {
-  //   setAnchorEl(anchorEl ? null : event.currentTarget);
-  // };
+  const RequireAuth = ({ children }) => {
+    return currentUser ? children : <Navigate to="/" />;
+  };
   return (
     <div>
       <Router>
@@ -50,13 +51,22 @@ function App() {
             handleMenu,
             users,
             setusers,
+            currentUser,
+            setcurrentUser,
             // handleClick,
           }}
         >
           <Routes>
             <Route index exact element={<LoginPage />} />
             {/* <Route path="table" exact element={<BasicTable />} /> */}
-            <Route path="/users" element={<UsersPage />}>
+            <Route
+              path="/users"
+              element={
+                // <RequireAuth>
+                  <UsersPage />
+                // </RequireAuth>
+              }
+            >
               <Route path="userdetails/:id" element={<UserDetails />} />
             </Route>
           </Routes>

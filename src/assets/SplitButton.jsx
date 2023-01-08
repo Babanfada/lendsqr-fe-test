@@ -58,9 +58,7 @@ export default function SplitButton() {
             color: "rgba(84, 95, 125, 1)",
             fontFamily: "Work Sans",
             width: "180px",
-            // fontWeight: 400,
-            // fontSize: 14,
-            // lineHeight: 16,
+
             border: "none",
           }}
           onClick={handleClick}
